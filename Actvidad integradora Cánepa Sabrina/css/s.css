@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(233, 233, 233);
+}
+.grid-contenedor{
+    display: grid;
+    gap: 5px;
+    background-color: rgb(197, 197, 197);
+    grid-template: 
+    "header" 50px
+    "nav" 75px
+    "aside" auto
+    "footer" 120px;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(141, 80, 0);
+    border-radius: 5px;
+}
+.header h1{
+    text-align: center;
+    font-size: 25px;
+    padding: 1px;
+
+
+}
+.nav{
+    grid-area: nav;
+    background-color: rgb(141, 80, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
+.nav ul{
+    list-style: none;
+    padding: 5px;
+    background:rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+}
+.nav li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+.nav li{
+    display: inline-block;
+    text-align: center;
+}
+.nav li a:hover{
+    color: rgb(2, 2, 2);
+    background:  rgb(197, 197, 197);
+}
+.aside{
+    grid-area: aside;
+    background-color:  rgb(141, 80, 0);
+    border-radius: 5px;
+}
+.aside p{
+    padding: 10px;
+}
+.aside img{
+    margin: auto;
+    width: 80%; 
+    border-radius: 5px;
+}
+.redes img{
+    width: 30px;
+    height: 30px;
+}
+.footer{
+    grid-area: footer;
+    background-color:  rgb(141, 80, 0);
+    text-align: center;
+    padding:9px;
+    border-radius: 5px;
+}
+.footer h1{
+    font-size: 17px;
+}
+.footer p{
+    font-size: 12px;
+}
+@media (min-width: 600px){
+    .grid-contenedor{
+        grid-template: 
+        "header header" 90px
+        "nav aside" auto
+        "footer footer" 120px / 140px auto;
+    }
+    .header p{
+        padding: 17px;
+    }
+    .nav ul{
+        width: 85%;
+    }
+    .nav ul li{
+        padding: 25px;
+    }
+
+}
+@media (min-width: 900px){
+    .grid-contenedor{
+        grid-template:
+        "header header header" 80px
+        "nav aside aside" auto
+        "footer footer footer" 120px / 190px auto 190px;
+    }
+    .aside img{
+     width: 50%;   
+    }
+}
